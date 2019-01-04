@@ -9,6 +9,8 @@
 
 namespace io {
 
-
+int Human::Age::GetAge(){
+	return ageInYears;
+}
 
 } /* namespace io */

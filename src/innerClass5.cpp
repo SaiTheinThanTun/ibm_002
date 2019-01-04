@@ -15,7 +15,20 @@ using namespace io;
 
 int main() {
 
-	Human sai;
+	int length = 10;
+	Human sai[length];
+
+	for(int i=0; i<length; i++){
+		sai[i].occupation->PrintAgeOccupation();
+	}
+
+	for(int i=0; i<length; i++){
+			sai[i].occupation->AssignOccupation();
+		}
+
+	for(int i=0; i<length; i++){
+			sai[i].occupation->PrintAgeOccupation();
+		}
 
 	return 0;
 }

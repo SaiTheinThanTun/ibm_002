@@ -14,11 +14,13 @@
 namespace io {
 
 class Human::Age {
+
 private:
 	Human &parent;
 	int ageInYears;
 public:
 	Age(Human &t): parent(t), ageInYears(rand()%100) {};
+	int GetAge();
 };
 
 } /* namespace io */
