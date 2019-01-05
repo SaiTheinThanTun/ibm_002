@@ -7,14 +7,14 @@
 
 //#include "Human.h"
 #include "Occupation.h"
-#include "Age.h"
+#include "Age.h" // SEE LINE 17. NO REASON THIS SHOULD BE CALLED HERE IN CPP FILE!!!
 #include <iostream>
 
 namespace io {
 
 void Human::Occupation::AssignOccupation(){
 	//assignment of occupation depending on ageInYears (on another object: age)
-	int age = parent.age->GetAge();
+	int age = parent.age->GetAge(); // THIS IS BAD PRACTICE!!!!!!!!!!!!!!!!!!!!!!
 
 	if(age<5){occuType=Non;}
 	else if(age<18){occuType=Student;}

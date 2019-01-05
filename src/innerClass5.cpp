@@ -11,6 +11,8 @@
 #include "Age.h"
 #include "Occupation.h"
 #include "Location.h"
+#include "Infection.h"
+#include "Patch.h"
 
 #include "Debug.h"
 

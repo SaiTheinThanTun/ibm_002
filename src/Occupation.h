@@ -10,9 +10,9 @@
 
 #include"Human.h"
 
-enum OccuType {Non,Student,Farmer,Retired};
-
 namespace io {
+
+enum OccuType {Non,Student,Farmer,Retired};
 
 class Human::Occupation {
 private:

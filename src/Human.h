@@ -8,15 +8,17 @@
 #ifndef HUMAN_H_
 #define HUMAN_H_
 
-enum Sex {M,F}; //this is outside of namespace, might be troublesome someday
 
 namespace io {
+
+enum Sex {M,F}; //this is outside of namespace, might be troublesome someday
 
 class Human {
 	//declare nested classes; using forward declaration with pointer below
 	class Age;
 	class Occupation;
 	class Location;
+	class Infection;
 
 private:
 	Sex sex;
@@ -28,6 +30,7 @@ public:
 	Age* age;
 	Occupation* occupation;
 	Location* location;
+	Infection* infection;
 	//Human(): sex(M), age(*this), occupation(*this){};
 	Human();
 	~Human();
