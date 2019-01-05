@@ -14,7 +14,7 @@
 namespace io {
 
 class Human::Age {
-friend class Human;
+//friend class Human;
 private:
 	Human &parent; //recording address of Human object created; to be accessed from within later
 	int ageInYears;

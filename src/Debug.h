@@ -28,15 +28,15 @@ int DebugAge(){
 	return 0;
 }
 
-/*int DebugLocation(){
+int DebugLocation(){
 	cout << "Debugging Location" << endl;
 
-	Location myloc;
+	Human myloc;
 
-	myloc.SetCurrentPatch(3);
-	cout<< myloc.GetCurrentPatch() << endl;
+	myloc.location->SetCurrentPatch(3);
+	cout<< myloc.location->GetCurrentPatch() << endl;
 	return 0;
-}*/
+}
 
 int DebugOccupation(){
 	cout << "Debugging Occupation" << endl;

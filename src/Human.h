@@ -16,6 +16,7 @@ class Human {
 	//declare nested classes; using forward declaration with pointer below
 	class Age;
 	class Occupation;
+	class Location;
 
 private:
 	Sex sex;
@@ -26,6 +27,7 @@ public:
 	//only here for the debugging process (for now)
 	Age* age;
 	Occupation* occupation;
+	Location* location;
 	//Human(): sex(M), age(*this), occupation(*this){};
 	Human();
 	~Human();

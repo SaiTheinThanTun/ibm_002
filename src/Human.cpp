@@ -8,6 +8,7 @@
 #include "Human.h"
 #include "Age.h"
 #include "Occupation.h"
+#include "Location.h"
 
 namespace io {
 
@@ -16,12 +17,14 @@ Human::Human(){
 	sex = M;
 	age= new Age(*this);
 	occupation = new Occupation(*this);
+	location = new Location(*this);
 }
 
 Human::~Human(){
 	//destruction of allocated memory
 	delete age;
 	delete occupation;
+	delete location;
 }
 
 void Human::SetSex(Sex sex){

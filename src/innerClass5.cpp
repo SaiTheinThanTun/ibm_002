@@ -10,6 +10,7 @@
 #include "Human.h"
 #include "Age.h"
 #include "Occupation.h"
+#include "Location.h"
 
 #include "Debug.h"
 
@@ -21,9 +22,11 @@ using namespace io;
 int main() {
 
 
+	/*DebugHuman();
 	DebugAge();
 	DebugOccupation();
-	DebugHuman();
+	DebugLocation();
+	*/
 
 
 

@@ -20,6 +20,7 @@ private:
 	OccuType occuType;
 public:
 	Occupation(Human &t): parent(t), occuType(Non) {};
+
 	void AssignOccupation(); //depending on age
 	void SetOccuType(OccuType occuType);
 	OccuType GetOccuType();

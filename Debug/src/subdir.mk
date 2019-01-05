@@ -6,18 +6,21 @@
 CPP_SRCS += \
 ../src/Age.cpp \
 ../src/Human.cpp \
+../src/Location.cpp \
 ../src/Occupation.cpp \
 ../src/innerClass5.cpp 
 
 OBJS += \
 ./src/Age.o \
 ./src/Human.o \
+./src/Location.o \
 ./src/Occupation.o \
 ./src/innerClass5.o 
 
 CPP_DEPS += \
 ./src/Age.d \
 ./src/Human.d \
+./src/Location.d \
 ./src/Occupation.d \
 ./src/innerClass5.d 
 
