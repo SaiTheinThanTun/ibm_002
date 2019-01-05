@@ -16,7 +16,7 @@ using namespace io;
 int main() {
 
 	int length = 10;
-	Human sai[length];
+	Human sai[length]; //create array of objects of length
 
 	for(int i=0; i<length; i++){
 		sai[i].Test();

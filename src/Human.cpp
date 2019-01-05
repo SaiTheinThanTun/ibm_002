@@ -12,12 +12,14 @@
 namespace io {
 
 Human::Human(){
+	//default initialization
 	sex = M;
 	age= new Age(*this);
 	occupation = new Occupation(*this);
 }
 
 Human::~Human(){
+	//destruction of allocated memory
 	delete age;
 	delete occupation;
 }

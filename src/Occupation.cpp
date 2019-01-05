@@ -13,6 +13,7 @@
 namespace io {
 
 void Human::Occupation::AssignOccupation(){
+	//assignment of occupation depending on ageInYears (on another object: age)
 	int age = parent.age->GetAge();
 
 	if(age<5){occuType=Non;}
@@ -31,12 +32,14 @@ OccuType Human::Occupation::GetOccuType(){
 
 
 void Human::Occupation::ComingOfAgeNewOccupation(){
+	//as age advances, occupation change. just a sample here
 	if(parent.age->GetAge()>18 && (occuType==Non || occuType==Student)){
 		occuType= Farmer;
 	}
 };
 
 void Human::Occupation::PrintAgeOccupation(){
+	//testing if accessing member function from another object works
 	int age = parent.age->GetAge();
 	std::cout<<"Age: " << age << " and Occupation: " << occuType << std::endl;
 };

@@ -16,7 +16,7 @@ namespace io {
 
 class Human::Occupation {
 private:
-	Human &parent;
+	Human &parent; //recording address of Human object created; to be accessed from within later
 	OccuType occuType;
 public:
 	Occupation(Human &t): parent(t), occuType(Non) {};

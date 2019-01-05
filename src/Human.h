@@ -13,6 +13,7 @@ enum Sex {M,F};
 namespace io {
 
 class Human {
+	//declare nested classes; using forward declaration with pointer below
 	class Age;
 	class Occupation;
 
