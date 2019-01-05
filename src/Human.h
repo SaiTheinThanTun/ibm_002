@@ -8,7 +8,7 @@
 #ifndef HUMAN_H_
 #define HUMAN_H_
 
-enum Sex {M,F};
+enum Sex {M,F}; //this is outside of namespace, might be troublesome someday
 
 namespace io {
 
@@ -19,13 +19,18 @@ class Human {
 
 private:
 	Sex sex;
-	Age* age;
-	Occupation* occupation;
+	//Age* age;
+	//Occupation* occupation;
 
 public:
+	//only here for the debugging process (for now)
+	Age* age;
+	Occupation* occupation;
 	//Human(): sex(M), age(*this), occupation(*this){};
 	Human();
 	~Human();
+	void SetSex(Sex sex);
+	Sex GetSex();
 	void Test();
 	void Test2();
 };

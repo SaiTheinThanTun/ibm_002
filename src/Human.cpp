@@ -24,6 +24,14 @@ Human::~Human(){
 	delete occupation;
 }
 
+void Human::SetSex(Sex sex){
+	this->sex = sex;
+}
+
+Sex Human::GetSex(){
+	return sex;
+}
+
 void Human::Test(){
 	//testing of functions from objects go here
 	occupation->PrintAgeOccupation();
