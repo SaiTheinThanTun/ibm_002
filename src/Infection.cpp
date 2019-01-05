@@ -18,12 +18,12 @@ void Human::Infection::InfectHuman(){
 	if(state==S) state=I;
 }
 
-void Human::Infection::Progression(Patch* patch){
+void Human::Infection::Progression(Patch patch){
 //void Infection::Progression(){
 	// get age, state, immunity level, etc through friends
 	//if(state==I) state = R;
 	//std::cout << Patch::GetInfectivityToHuman() << std::endl;
-	std::cout << patch->GetInfectivityToHuman() << std::endl;
+	std::cout << patch.GetInfectivityToHuman() << std::endl;
 
 }
 

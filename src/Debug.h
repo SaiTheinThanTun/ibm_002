@@ -10,8 +10,8 @@
 #define DEBUG_H_
 
 #include "Human.h"
-#include "Age.h"
-#include "Occupation.h"
+//#include "Age.h"
+//#include "Occupation.h"
 #include <iostream>
 
 using namespace std;
@@ -76,16 +76,16 @@ int DebugHuman(){
 
 }
 
-/*int DebugInfection(){
+int DebugInfection(){
 
 	cout << "Debugging Infection" << endl;
-	Infection myInf;
-	myInf.InfectHuman();
-	cout << myInf.GetState() << endl;
+	Human myInf;
+	myInf.infection->InfectHuman();
+	cout << myInf.infection->GetState() << endl;
 	Patch myPatch;
-	myInf.Progression(myPatch);
+	myInf.infection->Progression(myPatch);
 	//myInf.Progression();
-	cout << myInf.GetState() << endl;
+	cout << myInf.infection->GetState() << endl;
 	return 0;
 }
 
@@ -106,7 +106,7 @@ int DebugPatch(){
 
 	return 0;
 
-}*/
+}
 
 
 

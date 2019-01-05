@@ -14,7 +14,7 @@ namespace io {
 enum Sex {M,F}; //this is outside of namespace, might be troublesome someday
 
 class Human {
-	//declare nested classes; using forward declaration with pointer below
+	//4. declare nested classes; using forward declaration with pointer below
 	class Age;
 	class Occupation;
 	class Location;
@@ -27,6 +27,7 @@ private:
 
 public:
 	//only here for the debugging process (for now)
+	//5. declare pointer to the class
 	Age* age;
 	Occupation* occupation;
 	Location* location;

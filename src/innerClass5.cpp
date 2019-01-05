@@ -28,6 +28,8 @@ int main() {
 	DebugAge();
 	DebugOccupation();
 	DebugLocation();
+	DebugInfection();
+	DebugPatch();
 	*/
 
 

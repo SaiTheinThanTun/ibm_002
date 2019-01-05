@@ -5,6 +5,8 @@
  *      Author: Sai
  */
 
+//When adding new nested class, follow the numbers
+//1. add header file
 #include "Human.h"
 #include "Age.h"
 #include "Occupation.h"
@@ -14,7 +16,7 @@
 namespace io {
 
 Human::Human(){
-	//default initialization
+	//2. default initialization
 	sex = M;
 	age= new Age(*this);
 	occupation = new Occupation(*this);
@@ -23,7 +25,7 @@ Human::Human(){
 }
 
 Human::~Human(){
-	//destruction of allocated memory
+	//3. destruction of allocated memory
 	delete age;
 	delete occupation;
 	delete location;
