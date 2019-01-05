@@ -18,15 +18,15 @@ class Human {
 
 private:
 	Sex sex;
-	//Age* age;
-	//Occupation* occupation;
+	Age* age;
+	Occupation* occupation;
 
 public:
-	Age* age;
-		Occupation* occupation;
 	//Human(): sex(M), age(*this), occupation(*this){};
 	Human();
 	~Human();
+	void Test();
+	void Test2();
 };
 
 } /* namespace io */

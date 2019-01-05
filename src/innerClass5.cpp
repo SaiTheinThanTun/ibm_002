@@ -19,15 +19,15 @@ int main() {
 	Human sai[length];
 
 	for(int i=0; i<length; i++){
-		sai[i].occupation->PrintAgeOccupation();
+		sai[i].Test();
 	}
 
 	for(int i=0; i<length; i++){
-			sai[i].occupation->AssignOccupation();
+		sai[i].Test2();
 		}
 
 	for(int i=0; i<length; i++){
-			sai[i].occupation->PrintAgeOccupation();
+		sai[i].Test();
 		}
 
 	return 0;

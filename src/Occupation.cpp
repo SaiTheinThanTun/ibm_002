@@ -21,8 +21,19 @@ void Human::Occupation::AssignOccupation(){
 	else occuType=Retired;
 };
 
+void Human::Occupation::SetOccuType(OccuType occuType){
+	this->occuType = occuType;
+};
+
 OccuType Human::Occupation::GetOccuType(){
 	return occuType;
+};
+
+
+void Human::Occupation::ComingOfAgeNewOccupation(){
+	if(parent.age->GetAge()>18 && (occuType==Non || occuType==Student)){
+		occuType= Farmer;
+	}
 };
 
 void Human::Occupation::PrintAgeOccupation(){

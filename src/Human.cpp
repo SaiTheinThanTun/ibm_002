@@ -22,4 +22,13 @@ Human::~Human(){
 	delete occupation;
 }
 
+void Human::Test(){
+	//testing of functions from objects go here
+	occupation->PrintAgeOccupation();
+}
+
+void Human::Test2(){
+	occupation->AssignOccupation();
+}
+
 } /* namespace io */

@@ -20,7 +20,9 @@ private:
 	int ageInYears;
 public:
 	Age(Human &t): parent(t), ageInYears(rand()%100) {};
-	int GetAge();
+	void SetAge(int age);
+	int GetAge() const;
+	void Aging();
 };
 
 } /* namespace io */
