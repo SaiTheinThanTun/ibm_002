@@ -13,6 +13,7 @@
 #include "Location.h"
 #include "Infection.h"
 #include "Patch.h"
+#include "InfectivityToPatch.h"
 
 #include "Debug.h"
 

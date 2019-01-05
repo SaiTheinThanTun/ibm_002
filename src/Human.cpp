@@ -12,6 +12,7 @@
 #include "Occupation.h"
 #include "Location.h"
 #include "Infection.h"
+#include "InfectivityToPatch.h"
 
 namespace io {
 
@@ -22,6 +23,7 @@ Human::Human(){
 	occupation = new Occupation(*this);
 	location = new Location(*this);
 	infection = new Infection(*this);
+	infectivityToPatch = new InfectivityToPatch(*this);
 }
 
 Human::~Human(){
@@ -30,6 +32,7 @@ Human::~Human(){
 	delete occupation;
 	delete location;
 	delete infection;
+	delete infectivityToPatch;
 }
 
 void Human::SetSex(Sex sex){

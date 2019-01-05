@@ -7,6 +7,7 @@ CPP_SRCS += \
 ../src/Age.cpp \
 ../src/Human.cpp \
 ../src/Infection.cpp \
+../src/InfectivityToPatch.cpp \
 ../src/Location.cpp \
 ../src/Occupation.cpp \
 ../src/Patch.cpp \
@@ -16,6 +17,7 @@ OBJS += \
 ./src/Age.o \
 ./src/Human.o \
 ./src/Infection.o \
+./src/InfectivityToPatch.o \
 ./src/Location.o \
 ./src/Occupation.o \
 ./src/Patch.o \
@@ -25,6 +27,7 @@ CPP_DEPS += \
 ./src/Age.d \
 ./src/Human.d \
 ./src/Infection.d \
+./src/InfectivityToPatch.d \
 ./src/Location.d \
 ./src/Occupation.d \
 ./src/Patch.d \

@@ -19,6 +19,7 @@ class Human {
 	class Occupation;
 	class Location;
 	class Infection;
+	class InfectivityToPatch;
 
 private:
 	Sex sex;
@@ -32,6 +33,7 @@ public:
 	Occupation* occupation;
 	Location* location;
 	Infection* infection;
+	InfectivityToPatch* infectivityToPatch;
 	//Human(): sex(M), age(*this), occupation(*this){};
 	Human();
 	~Human();
