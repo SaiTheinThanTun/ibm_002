@@ -19,7 +19,7 @@ namespace io {
 Human::Human(){
 	//2. default initialization
 	sex = M;
-	patchLength = 0; //if pointer to patchArray is not passed
+	patchLength = 1; //if pointer to patchArray is not passed
 
 	age= new Age(*this);
 	occupation = new Occupation(*this);
