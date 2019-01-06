@@ -19,6 +19,20 @@ namespace io {
 Human::Human(){
 	//2. default initialization
 	sex = M;
+	patchLength = 0; //if pointer to patchArray is not passed
+
+	age= new Age(*this);
+	occupation = new Occupation(*this);
+	location = new Location(*this);
+	infection = new Infection(*this);
+	infectivityToPatch = new InfectivityToPatch(*this);
+}
+
+Human::Human(Patch* patchArray){
+	//2. default initialization with pointer to patchArray
+	sex = M;
+	patchLength = sizeof(patchArray)/sizeof(Patch);
+
 	age= new Age(*this);
 	occupation = new Occupation(*this);
 	location = new Location(*this);

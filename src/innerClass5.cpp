@@ -37,7 +37,7 @@ int main() {
 	Patch village[patchSize];
 	cout << "Length of the patch array is " << sizeof(village)/sizeof(Patch) << endl;
 
-	Human sai;
+	Human sai(village);
 
 	for(int i=0;i<10;i++){
 		sai.Test3(village);
