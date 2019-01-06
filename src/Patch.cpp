@@ -18,7 +18,8 @@ Patch::Patch() {
 }
 
 void Patch::StoreHistory(){
-
+	historyInfectedHuman++;
+	SetInfectivityToHuman(historyInfectedHuman);
 }
 
 void Patch::SetInfectivityToHuman(int infectivityToHuman){

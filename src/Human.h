@@ -8,6 +8,8 @@
 #ifndef HUMAN_H_
 #define HUMAN_H_
 
+#include "Patch.h"
+
 
 namespace io {
 
@@ -41,6 +43,8 @@ public:
 	Sex GetSex();
 	void Test();
 	void Test2();
+	void Test3(Patch* patchArray);
+	void Central();
 };
 
 } /* namespace io */

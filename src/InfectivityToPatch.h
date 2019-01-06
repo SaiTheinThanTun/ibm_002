@@ -12,6 +12,7 @@
 #include "Age.h"
 #include "Infection.h"
 #include "Occupation.h"
+#include "Location.h"
 
 namespace io {
 

@@ -18,6 +18,7 @@ private:
 	int mosquitoAbundance;
 public:
 	Patch();
+	//const int LENGTH;
 	void StoreHistory();
 	void SetInfectivityToHuman(int infectivityToHuman);
 	int GetInfectivityToHuman();
