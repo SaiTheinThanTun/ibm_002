@@ -9,6 +9,7 @@
 #define LOCATION_H_
 
 #include "Human.h"
+#include <iostream>
 
 namespace io {
 
@@ -20,7 +21,7 @@ private:
 	int affinityPatches; //should be an array of patches that could be travelled
 
 public:
-	Location(Human &t): parent(t), currentPatch(0), homePatch(0), affinityPatches(0) {};
+	Location(Human &t): parent(t), currentPatch(rand()%t.patchLength), homePatch(0), affinityPatches(0) {};
 
 	int GetCurrentPatch() const;
 	void SetCurrentPatch(int currentPatch);

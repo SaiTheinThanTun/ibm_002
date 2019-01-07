@@ -7,6 +7,8 @@
 //============================================================================
 
 #include <iostream>
+//#include <vector>
+
 #include "Human.h"
 #include "Age.h"
 #include "Occupation.h"
@@ -46,7 +48,8 @@ int main() {
 
 	cout << "Infectivity to human in patch 0 is " << village[0].GetInfectivityToHuman() << endl;
 
-
+	//vector<Human> yu(10, Human(village));
+	//yu[0].Central();
 
 	return 0;
 }
