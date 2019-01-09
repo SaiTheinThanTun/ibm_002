@@ -19,7 +19,7 @@ namespace io {
 Human::Human(){
 	//2. default initialization
 	sex = M;
-	patchLength = 1; //if pointer to patchArray is not passed
+	patchMax = 1; //if pointer to patchArray is not passed
 
 	age= new Age(*this);
 	occupation = new Occupation(*this);
@@ -28,10 +28,11 @@ Human::Human(){
 	infectivityToPatch = new InfectivityToPatch(*this);
 }
 
-Human::Human(Patch* patchArray){
+Human::Human(Patch* patchArray, int patchMax){
 	//2. default initialization with pointer to patchArray
 	sex = M;
-	patchLength = sizeof(patchArray)/sizeof(Patch);
+	//patchMax = sizeof(*patchArray)/sizeof(Patch);
+	this->patchMax = patchMax;
 
 	age= new Age(*this);
 	occupation = new Occupation(*this);
@@ -66,7 +67,7 @@ void Human::Test2(){
 	occupation->AssignOccupation();
 }
 
-void Human::Test3(Patch* patchArray){
+void Human::Test3(Patch *patchArray){
 	infectivityToPatch->InfectPatch(0,0,patchArray);
 }
 

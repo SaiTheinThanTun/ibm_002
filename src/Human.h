@@ -25,7 +25,7 @@ class Human {
 
 private:
 	Sex sex;
-	int patchLength;
+	int patchMax;
 	//Age* age;
 	//Occupation* occupation;
 
@@ -39,13 +39,13 @@ public:
 	InfectivityToPatch* infectivityToPatch;
 	//Human(): sex(M), age(*this), occupation(*this){};
 	Human();
-	Human(Patch* patchArray);
+	Human(Patch* patchArray, int patchMax);
 	~Human();
 	void SetSex(Sex sex);
 	Sex GetSex();
 	void Test();
 	void Test2();
-	void Test3(Patch* patchArray);
+	void Test3(Patch *patchArray);
 	void Central();
 };
 
