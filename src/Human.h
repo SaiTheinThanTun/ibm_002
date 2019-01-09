@@ -25,7 +25,10 @@ class Human {
 
 private:
 	Sex sex;
+<<<<<<< HEAD
 	int patchMax;
+=======
+>>>>>>> parent of b04b38d... new Human constructor with pointer to patchArray
 	//Age* age;
 	//Occupation* occupation;
 
@@ -39,7 +42,10 @@ public:
 	InfectivityToPatch* infectivityToPatch;
 	//Human(): sex(M), age(*this), occupation(*this){};
 	Human();
+<<<<<<< HEAD
 	Human(Patch* patchArray, int patchMax);
+=======
+>>>>>>> parent of b04b38d... new Human constructor with pointer to patchArray
 	~Human();
 	void SetSex(Sex sex);
 	Sex GetSex();

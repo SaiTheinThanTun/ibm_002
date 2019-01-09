@@ -40,8 +40,12 @@ int main() {
 	Patch village[patchSize];
 	cout << "Length of the patch array is " << sizeof(village)/sizeof(Patch) << endl;
 
+<<<<<<< HEAD
 	//Human sai;
 	Human sai(village, patchSize);
+=======
+	Human sai;
+>>>>>>> parent of b04b38d... new Human constructor with pointer to patchArray
 
 	for(int i=0;i<10;i++){
 		sai.Test3(village);
