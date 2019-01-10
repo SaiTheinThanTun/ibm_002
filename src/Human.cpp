@@ -66,6 +66,7 @@ void Human::Central(){
 	//		roll dice -> infect the patch
 	//	if s/he is not infected, and the patch s/he is on is infected
 	//		roll dice -> infect him/her
+	infection->InfectHuman();
 }
 
 } /* namespace io */

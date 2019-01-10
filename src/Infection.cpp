@@ -15,7 +15,10 @@ States Human::Infection::GetState() const{
 }
 
 void Human::Infection::InfectHuman(){
-	if(state==S) state=I;
+	//random infection
+	if(state==S && (rand()%100)<20) state=I;
+	else if(state==I && (rand()%100)<10) state=R;
+	//if 'if else' is not written, events will happen at the same timestep!!!
 }
 
 void Human::Infection::Progression(Patch patch){

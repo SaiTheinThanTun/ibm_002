@@ -52,6 +52,13 @@ public:
 	//push the values to statesSummaryAll array to be stored for all iterations
 	//iterations variable was intended for this but simple array could not be initialized with user input value
 
+	void Central(){
+		//Control center of the Observer object/class;
+		CountingStates();
+		WriteOut();
+		PushOut();
+	};
+
 
 };
 

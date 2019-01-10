@@ -52,9 +52,14 @@ int main() {
 
 	for(int i=0; i< iterations; i++){
 
-		observer.CountingStates();
+		for(int j=0; j< humanMax; j++){
+			humanArray[j].Central();
+		}
+
+		/*observer.CountingStates();
 		observer.WriteOut();
-		observer.PushOut();
+		observer.PushOut();*/
+		observer.Central();
 	}
 
 	outData.close();
