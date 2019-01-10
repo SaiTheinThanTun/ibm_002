@@ -7,6 +7,8 @@
 //============================================================================
 
 #include <iostream>
+#include <fstream>
+
 #include "Human.h"
 #include "Age.h"
 #include "Occupation.h"
@@ -39,13 +41,26 @@ int main() {
 
 	int patchMax = 4*4;
 	int humanMax=100;
-	int iterations=100;
+	int iterations=30;
 
 	Patch village[patchMax];
 	Human humanArray[humanMax];
-	string writeDestination = "out.csv";
+	ofstream outData;
+	outData.open("out.csv");
 
+	Observer observer(humanArray, humanMax, village, patchMax, iterations, &outData);
 
+	for(int i=0; i< iterations; i++){
+
+		observer.CountingStates();
+		observer.WriteOut();
+		observer.PushOut();
+	}
+
+	outData.close();
+
+	cout << "no. of S is: " << observer.statesSummary.GetS() << endl;
+	cout << "no. of S on 29th item is: " << observer.statesSummaryAll[29].GetS() << endl;
 
 	cout << "Length of the patch array is " << sizeof(village)/sizeof(Patch) << endl;
 

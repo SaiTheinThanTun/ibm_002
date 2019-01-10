@@ -9,6 +9,7 @@
 #define OBSERVER_H_
 
 #include <iostream>
+#include <fstream>
 #include <vector>
 
 #include "Human.h"
@@ -24,27 +25,27 @@ private:
 	Patch* patchArray;
 	int patchMax;
 	int iterations;
-	std::string writeDestination;
+	std::ofstream* outData;
 
 public:
 	StatesSummary statesSummary;
 	//StatesSummary statesSummaryAll[iterations];
 	std::vector<StatesSummary> statesSummaryAll; //(int size=iterations, StatesSummary);
 
-	Observer(Human* humanArray, int humanMax, Patch* patchArray, int patchMax, int iterations, std::string writeDestination){
+	Observer(Human* humanArray, int humanMax, Patch* patchArray, int patchMax, int iterations, std::ofstream* outData){
 		this->humanArray=humanArray;
 		this->humanMax=humanMax;
 		this->patchArray=patchArray;
 		this->patchMax=patchMax;
 		this->iterations=iterations;
-		this->writeDestination=writeDestination;
+		this->outData=outData;
 	};
 
 	void CountingStates();
 	//count the states in a given human array
 	//set respective numbers to statesSummary object
 
-	void WriteOut(std::ofstream& outData){statesSummary.WriteOut(outData);};
+	void WriteOut(){statesSummary.WriteOut(*outData);};
 	//nested function WriteOut is invoked here to keep statesSummary encapsulated
 
 	void PushOut();
