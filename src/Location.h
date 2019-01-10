@@ -21,10 +21,7 @@ private:
 	int affinityPatches; //should be an array of patches that could be travelled
 
 public:
-	Location(Human &t): parent(t), homePatch(0), affinityPatches(0) {
-		srand (time(NULL));
-		currentPatch=(rand()%parent.patchMax);
-	};
+	Location(Human &t): parent(t), currentPatch(0), homePatch(0), affinityPatches(0) {};
 
 	int GetCurrentPatch() const;
 	void SetCurrentPatch(int currentPatch);

@@ -9,8 +9,10 @@ CPP_SRCS += \
 ../src/Infection.cpp \
 ../src/InfectivityToPatch.cpp \
 ../src/Location.cpp \
+../src/Observer.cpp \
 ../src/Occupation.cpp \
 ../src/Patch.cpp \
+../src/StatesSummary.cpp \
 ../src/innerClass5.cpp 
 
 OBJS += \
@@ -19,8 +21,10 @@ OBJS += \
 ./src/Infection.o \
 ./src/InfectivityToPatch.o \
 ./src/Location.o \
+./src/Observer.o \
 ./src/Occupation.o \
 ./src/Patch.o \
+./src/StatesSummary.o \
 ./src/innerClass5.o 
 
 CPP_DEPS += \
@@ -29,8 +33,10 @@ CPP_DEPS += \
 ./src/Infection.d \
 ./src/InfectivityToPatch.d \
 ./src/Location.d \
+./src/Observer.d \
 ./src/Occupation.d \
 ./src/Patch.d \
+./src/StatesSummary.d \
 ./src/innerClass5.d 
 
 

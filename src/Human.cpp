@@ -19,8 +19,6 @@ namespace io {
 Human::Human(){
 	//2. default initialization
 	sex = M;
-<<<<<<< HEAD
-	patchMax = 1; //if pointer to patchArray is not passed
 
 	age= new Age(*this);
 	occupation = new Occupation(*this);
@@ -29,20 +27,7 @@ Human::Human(){
 	infectivityToPatch = new InfectivityToPatch(*this);
 }
 
-Human::Human(Patch* patchArray, int patchMax){
-	//2. default initialization with pointer to patchArray
-	sex = M;
-	//patchMax = sizeof(*patchArray)/sizeof(Patch);
-	this->patchMax = patchMax;
 
-=======
->>>>>>> parent of b04b38d... new Human constructor with pointer to patchArray
-	age= new Age(*this);
-	occupation = new Occupation(*this);
-	location = new Location(*this);
-	infection = new Infection(*this);
-	infectivityToPatch = new InfectivityToPatch(*this);
-}
 
 Human::~Human(){
 	//3. destruction of allocated memory
