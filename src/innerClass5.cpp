@@ -69,17 +69,6 @@ int main() {
 
 	cout << "Length of the patch array is " << sizeof(village)/sizeof(Patch) << endl;
 
-	Human sai;
-
-	for(int i=0;i<10;i++){
-		sai.Test3(village);
-	}
-
-
-	cout << "Infectivity to human in patch 0 is " << village[0].GetInfectivityToHuman() << endl;
-
-	cout << "current patch " << sai.location->GetCurrentPatch() <<endl;
-
 
 
 	return 0;

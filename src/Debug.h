@@ -90,24 +90,24 @@ int DebugInfection(){
 	return 0;
 }
 
-int DebugPatch(){
+/*int DebugPatch(){
 	cout << "Debugging Patch: single" << endl;
 	Patch myPatch;
-	myPatch.SetInfectivityToHuman(90);
+	//myPatch.SetInfectivityToHuman(90);
 	cout << myPatch.GetInfectivityToHuman() << endl;
 
 	cout << "Debugging Patch: multiple" << endl;
 	int noPatch =10;
 	Patch myPatchA[noPatch];
 	for(int i=0; i< noPatch; i++){
-		myPatchA[i].SetInfectivityToHuman(rand()%100);
+		//myPatchA[i].SetInfectivityToHuman(rand()%100);
 		cout <<"Patch number " << i << " has infectivity of " <<myPatchA[i].GetInfectivityToHuman() << endl;
 	}
 
 
 	return 0;
 
-}
+}*/
 
 
 

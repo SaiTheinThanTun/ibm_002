@@ -24,7 +24,7 @@ void Human::Infection::InfectHuman(Patch *patch){
 	if(state==S &&
 			(rand()%100)<(patch[parent.location->GetCurrentPatch()].GetInfectivityToHuman()))
 		state = I;
-	else if (state==I && (rand()%100)<10) state=R; //rno
+	else if (state==I && (rand()%100)<10) state=R; //rno // this is also Progression() stuff
 }
 
 void Human::Infection::Progression(){

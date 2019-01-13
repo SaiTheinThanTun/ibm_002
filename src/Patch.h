@@ -13,14 +13,17 @@ namespace io {
 class Patch {
 private:
 	int patchIndex;
-	int historyInfectedHuman;
+	int todayInfectedHuman;
+	int historyInfectedHuman[7];
 	int infectivityToHuman;
 	int mosquitoAbundance;
 public:
 	Patch();
 	//const int LENGTH;
+	void TodayInfectedHuman();
+	void ResetTodayInfectedHuman(){todayInfectedHuman=0;};
 	void StoreHistory();
-	void SetInfectivityToHuman(int infectivityToHuman);
+	void SetInfectivityToHuman();
 	int GetInfectivityToHuman();
 };
 

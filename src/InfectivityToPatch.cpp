@@ -10,7 +10,9 @@
 namespace io {
 void Human::InfectivityToPatch::SetRiskScore(States state, Sex sex, int age, OccuType occuType){};
 void Human::InfectivityToPatch::InfectPatch(int riskScore, int patchIndex, Patch* patchArray){
-	patchArray[parent.location->GetCurrentPatch()].StoreHistory();
+	if(parent.infection->GetState()==I){
+		patchArray[parent.location->GetCurrentPatch()].TodayInfectedHuman();
+	}
 
 }; //don't actually need riskScore
 
