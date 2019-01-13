@@ -44,7 +44,7 @@ public:
 	void Test();
 	void Test2();
 	void Test3(Patch *patchArray);
-	void Central();
+	void Central(Patch *patchArray);
 };
 
 } /* namespace io */

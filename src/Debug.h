@@ -80,12 +80,13 @@ int DebugInfection(){
 
 	cout << "Debugging Infection" << endl;
 	Human myInf;
-	myInf.infection->InfectHuman();
-	cout << myInf.infection->GetState() << endl;
 	Patch myPatch;
-	myInf.infection->Progression(myPatch);
-	//myInf.Progression();
+	myInf.infection->InfectHuman(&myPatch);
 	cout << myInf.infection->GetState() << endl;
+
+	//myInf.infection->Progression(myPatch);
+
+	//cout << myInf.infection->GetState() << endl;
 	return 0;
 }
 

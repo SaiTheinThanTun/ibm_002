@@ -53,7 +53,7 @@ int main() {
 	for(int i=0; i< iterations; i++){
 
 		for(int j=0; j< humanMax; j++){
-			humanArray[j].Central();
+			humanArray[j].Central(village);
 		}
 
 		/*observer.CountingStates();

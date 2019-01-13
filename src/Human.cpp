@@ -59,14 +59,14 @@ void Human::Test3(Patch *patchArray){
 	infectivityToPatch->InfectPatch(0,0,patchArray);
 }
 
-void Human::Central(){
+void Human::Central(Patch *patchArray){
 	//Procedures of the malaria cycle
 	//Human move (randomly in this version)
 	//	if s/he is infected, and the patch s/he is on has mosquitos
 	//		roll dice -> infect the patch
 	//	if s/he is not infected, and the patch s/he is on is infected
 	//		roll dice -> infect him/her
-	infection->InfectHuman();
+	infection->InfectHuman(patchArray);
 }
 
 } /* namespace io */

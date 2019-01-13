@@ -35,7 +35,7 @@ void Human::Location::SetCurrentPatch(int currentPatch){
 	}
 
 void Human::Location::Movement(int affinityPatches, int homePatch, int currentPatch){ //, int maxSize){
-	currentPatch = rand()%100; //%maxSize; //random movement //patchMax or parent.patchMax
+	currentPatch = rand()%100; //%maxSize; //random movement //patchMax or parent.patchMax //rno
 }
 
 } /* namespace io */
