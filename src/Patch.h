@@ -25,6 +25,7 @@ public:
 	void StoreHistory();
 	void SetInfectivityToHuman();
 	int GetInfectivityToHuman();
+	void Central();
 };
 
 } /* namespace io */

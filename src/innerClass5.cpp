@@ -43,6 +43,9 @@ int main() {
 	int humanMax=100;
 	int iterations=30;
 
+	//set seed
+	srand(2);
+
 	Patch village[patchMax];
 	Human humanArray[humanMax];
 	ofstream outData;
@@ -50,10 +53,25 @@ int main() {
 
 	Observer observer(humanArray, humanMax, village, patchMax, iterations, &outData);
 
+	//Initialize values
+	for(int i=0; i< humanMax; i++){
+		humanArray[i].location->SetCurrentPatch(rand()%patchMax);
+		if(rand()%5 ==0) humanArray[i].infection->SetState(I);
+		else humanArray[i].infection->SetState(S);
+	}
+	//infection seeds at the patches. or in human as above
+
+
 	for(int i=0; i< iterations; i++){
 
 		for(int j=0; j< humanMax; j++){
 			humanArray[j].Central(village);
+			humanArray[j].location->SetCurrentPatch(rand()%patchMax); // this is to simulate movement;
+			//there's a separate movement method
+		}
+
+		for(int k=0; k<patchMax; k++){
+			village[k].Central();
 		}
 
 		/*observer.CountingStates();

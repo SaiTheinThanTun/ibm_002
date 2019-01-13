@@ -23,6 +23,7 @@ private:
 
 public:
 	Infection(Human &t): parent(t), state(S) {};
+	void SetState(States state);
 	States GetState() const;
 	void InfectHuman(Patch *patch);
 	void Progression(); // get age, state, immunity level, etc through friends

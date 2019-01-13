@@ -58,4 +58,11 @@ int Patch::GetInfectivityToHuman(){
 	return infectivityToHuman;
 }
 
+void Patch::Central(){
+	StoreHistory();
+	SetInfectivityToHuman();
+	ResetTodayInfectedHuman();
+
+}
+
 } /* namespace io */

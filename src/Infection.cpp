@@ -11,6 +11,10 @@
 
 namespace io {
 
+void Human::Infection::SetState(States state) {
+	this->state = state;
+}
+
 States Human::Infection::GetState() const{
 	return state;
 }
