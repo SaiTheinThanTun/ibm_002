@@ -52,7 +52,7 @@ void Human::Test(){
 }
 
 void Human::Test2(){
-	occupation->AssignOccupation();
+	occupation->InitOccupation();
 }
 
 void Human::Test3(Patch *patchArray){
@@ -66,6 +66,7 @@ void Human::Central(Patch *patchArray){
 	//		roll dice -> infect the patch
 	//	if s/he is not infected, and the patch s/he is on is infected
 	//		roll dice -> infect him/her
+	infectivityToPatch->InfectPatch(0,0,patchArray);
 	infection->InfectHuman(patchArray);
 }
 

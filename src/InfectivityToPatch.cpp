@@ -12,6 +12,7 @@ void Human::InfectivityToPatch::SetRiskScore(States state, Sex sex, int age, Occ
 void Human::InfectivityToPatch::InfectPatch(int riskScore, int patchIndex, Patch* patchArray){
 	if(parent.infection->GetState()==I){
 		patchArray[parent.location->GetCurrentPatch()].TodayInfectedHuman();
+		//this doesn't do anything right now as the main function is not used anywhere
 	}
 
 }; //don't actually need riskScore

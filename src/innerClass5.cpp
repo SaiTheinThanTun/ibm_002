@@ -47,7 +47,7 @@ int main() {
 	int iterations=30;
 
 	//set seed
-	srand(2);
+	srand(1);
 
 	//initialise object instances in arrays
 	Patch village[patchMax];

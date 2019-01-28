@@ -12,7 +12,7 @@
 
 namespace io {
 
-void Human::Occupation::AssignOccupation(){
+void Human::Occupation::InitOccupation(){
 	//assignment of occupation depending on ageInYears (on another object: age)
 	int age = parent.age->GetAge(); // THIS IS BAD PRACTICE!!!!!!!!!!!!!!!!!!!!!!
 
@@ -31,7 +31,7 @@ OccuType Human::Occupation::GetOccuType(){
 };
 
 
-void Human::Occupation::ComingOfAgeNewOccupation(){
+void Human::Occupation::NewOccupation(){
 	//as age advances, occupation change. just a sample here
 	if(parent.age->GetAge()>18 && (occuType==Non || occuType==Student)){
 		occuType= Farmer;

@@ -42,7 +42,7 @@ int DebugOccupation(){
 	cout << "Debugging Occupation" << endl;
 
 	Human myoccu;
-	myoccu.occupation->ComingOfAgeNewOccupation();
+	myoccu.occupation->NewOccupation();
 
 	cout << myoccu.occupation->GetOccuType() << endl;
 	myoccu.occupation->SetOccuType(Farmer);
