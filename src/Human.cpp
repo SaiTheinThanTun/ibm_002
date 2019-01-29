@@ -12,7 +12,6 @@
 #include "Occupation.h"
 #include "Location.h"
 #include "Infection.h"
-#include "InfectivityToPatch.h"
 
 namespace io {
 
@@ -24,7 +23,6 @@ Human::Human(){
 	occupation = new Occupation(*this);
 	location = new Location(*this);
 	infection = new Infection(*this);
-	infectivityToPatch = new InfectivityToPatch(*this);
 }
 
 
@@ -35,7 +33,6 @@ Human::~Human(){
 	delete occupation;
 	delete location;
 	delete infection;
-	delete infectivityToPatch;
 }
 
 void Human::SetSex(Sex sex){
@@ -55,9 +52,6 @@ void Human::Test2(){
 	occupation->InitOccupation();
 }
 
-void Human::Test3(Patch *patchArray){
-	infectivityToPatch->InfectPatch(0,0,patchArray);
-}
 
 void Human::Central(Patch *patchArray){
 	//Procedures of the malaria cycle
@@ -66,7 +60,7 @@ void Human::Central(Patch *patchArray){
 	//		roll dice -> infect the patch
 	//	if s/he is not infected, and the patch s/he is on is infected
 	//		roll dice -> infect him/her
-	infectivityToPatch->InfectPatch(0,0,patchArray);
+	infection->InfectPatch(0,0,patchArray);
 	infection->InfectHuman(patchArray);
 }
 

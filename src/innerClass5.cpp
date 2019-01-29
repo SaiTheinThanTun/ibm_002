@@ -16,7 +16,6 @@
 #include "Occupation.h"
 #include "Location.h"
 #include "Infection.h"
-#include "InfectivityToPatch.h"
 //patch
 #include "Patch.h"
 //observer
