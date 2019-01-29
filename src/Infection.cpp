@@ -43,7 +43,7 @@ void Human::Infection::Progression(){
 
 }
 
-void Human::Infection::InfectPatch(int riskScore, int patchIndex, Patch* patchArray){
+void Human::Infection::InfectPatch(int riskScore, Patch* patchArray){
 	if(parent.infection->GetState()==I){
 		patchArray[parent.location->GetCurrentPatch()].TodayInfectedHuman();
 		//this doesn't do anything right now as the main function is not used anywhere

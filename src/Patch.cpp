@@ -19,6 +19,7 @@ Patch::Patch(): historyInfectedHuman {0,0,0,0,0,0,0} {
 	infectivityToHuman = 0;
 	mosquitoAbundance = 0;
 
+	//tmp = 0;
 }
 
 void Patch::TodayInfectedHuman(){
@@ -52,6 +53,7 @@ void Patch::SetInfectivityToHuman(){
 	else if(historyTotal <30) infectivityToHuman =20;
 	else infectivityToHuman=25;
 
+	//tmp = historyTotal;
 }
 
 int Patch::GetInfectivityToHuman(){

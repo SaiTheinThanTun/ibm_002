@@ -17,15 +17,20 @@ private:
 	int historyInfectedHuman[7];
 	int infectivityToHuman;
 	int mosquitoAbundance;
+
+	//int tmp;
 public:
 	Patch();
 	//const int LENGTH;
 	void TodayInfectedHuman();
 	void ResetTodayInfectedHuman(){todayInfectedHuman=0;};
+	//int GetTodayInfectedHuman(){return todayInfectedHuman;}; //delete after testing
 	void StoreHistory();
 	void SetInfectivityToHuman();
 	int GetInfectivityToHuman();
 	void Central();
+
+	//int GetTmp() {return tmp;};
 };
 
 } /* namespace io */

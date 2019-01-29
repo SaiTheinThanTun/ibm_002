@@ -46,7 +46,7 @@ int main() {
 	int iterations=30;
 
 	//set seed
-	srand(1);
+	srand(2);
 
 	//initialise object instances in arrays
 	Patch village[patchMax];
@@ -78,9 +78,10 @@ int main() {
 		}
 
 		for(int k=0; k<patchMax; k++){ //looping through patch array
+			//cout << village[k].GetTmp() << " ";
 			village[k].Central(); //Central includes: StoreHistory, SetInfectivityToHuman, ResetTodayInfectedHuman
 		}
-
+		//cout << endl;
 		/*observer.CountingStates();
 		observer.WriteOut();
 		observer.PushOut();*/
@@ -89,9 +90,10 @@ int main() {
 
 	outData.close();
 
+
 	//checking the output
 	cout << "no. of S is: " << observer.statesSummary.GetS() << endl;
-	cout << "no. of S on 29th item is: " << observer.statesSummaryAll[29].GetS() << endl;
+	cout << "no. of S on 20th item is: " << observer.statesSummaryAll[20].GetS() << endl;
 
 	cout << "Length of the patch array is " << sizeof(village)/sizeof(Patch) << endl;
 

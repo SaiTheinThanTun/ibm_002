@@ -60,7 +60,7 @@ void Human::Central(Patch *patchArray){
 	//		roll dice -> infect the patch
 	//	if s/he is not infected, and the patch s/he is on is infected
 	//		roll dice -> infect him/her
-	infection->InfectPatch(0,0,patchArray);
+	infection->InfectPatch(0,patchArray);
 	infection->InfectHuman(patchArray);
 }
 
