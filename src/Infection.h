@@ -29,6 +29,7 @@ public:
 	void Progression(); // get age, state, immunity level, etc through friends
 	//void Progression();
 	void InfectPatch(int riskScore, Patch* patchArray);
+	void SendingStates(Patch* patchArray);
 };
 
 } /* namespace io */

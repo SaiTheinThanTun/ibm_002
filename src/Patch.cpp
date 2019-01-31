@@ -19,6 +19,7 @@ Patch::Patch(): historyInfectedHuman {0,0,0,0,0,0,0} {
 	infectivityToHuman = 0;
 	mosquitoAbundance = 0;
 
+	//statesSummaryByPatch is initialized to 0's by default
 	//tmp = 0;
 }
 
@@ -27,6 +28,25 @@ void Patch::TodayInfectedHuman(){
 	//loop for all humans
 
 	//SetInfectivityToHuman(todayInfectedHuman); // don't actually need this
+}
+
+void Patch::ResetStatesSummaryByPatch(){
+	statesSummaryByPatch.SetS(0);
+	statesSummaryByPatch.SetI(0);
+	statesSummaryByPatch.SetR(0);
+}
+
+void Patch::IncrementS(){
+	//statesSummaryByPatch.S_++;
+	statesSummaryByPatch.SetS(statesSummaryByPatch.GetS()+1);
+}
+void Patch::IncrementI(){
+	//statesSummaryByPatch.I_++;
+	statesSummaryByPatch.SetI(statesSummaryByPatch.GetI()+1);
+}
+void Patch::IncrementR(){
+	//statesSummaryByPatch.R_++;
+	statesSummaryByPatch.SetR(statesSummaryByPatch.GetR()+1);
 }
 
 void Patch::StoreHistory(){

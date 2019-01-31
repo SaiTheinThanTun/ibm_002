@@ -8,6 +8,8 @@
 #ifndef PATCH_H_
 #define PATCH_H_
 
+#include "StatesSummary.h"
+
 namespace io {
 
 class Patch {
@@ -18,13 +20,23 @@ private:
 	int infectivityToHuman;
 	int mosquitoAbundance;
 
+	StatesSummary statesSummaryByPatch;
+
 	//int tmp;
 public:
+
+
 	Patch();
 	//const int LENGTH;
 	void TodayInfectedHuman();
 	void ResetTodayInfectedHuman(){todayInfectedHuman=0;};
 	//int GetTodayInfectedHuman(){return todayInfectedHuman;}; //delete after testing
+	void ResetStatesSummaryByPatch();
+
+	void IncrementS();
+	void IncrementI();
+	void IncrementR();
+
 	void StoreHistory();
 	void SetInfectivityToHuman();
 	int GetInfectivityToHuman();

@@ -51,4 +51,13 @@ void Human::Infection::InfectPatch(int riskScore, Patch* patchArray){
 
 };
 
+void Human::Infection::SendingStates(Patch* patchArray){
+	//send the state of the individual at current timestep to the patch they are on
+	switch(parent.infection->GetState()){
+	case S: patchArray[parent.location->GetCurrentPatch()].IncrementS(); break;
+	case I: patchArray[parent.location->GetCurrentPatch()].IncrementI(); break;
+	case R: patchArray[parent.location->GetCurrentPatch()].IncrementR(); break;
+	}
+}
+
 } /* namespace io */
