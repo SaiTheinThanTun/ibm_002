@@ -44,7 +44,7 @@ all: innerClass5
 innerClass5: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MacOS X C++ Linker'
-	g++  -o "innerClass5" $(OBJS) $(USER_OBJS) $(LIBS)
+	g++ -L/Applications/OpenMotif21/lib -L/usr/local/dislin -o "innerClass5" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 

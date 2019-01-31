@@ -22,6 +22,9 @@
 #include "Observer.h"
 #include "StatesSummary.h"
 
+//graphing
+#include "discpp.h"
+
 #include "Debug.h" // functions to debug whats implemented
 
 using namespace std;
@@ -41,10 +44,13 @@ int main() {
 	*/
 
 	//initialise properties of arrays
-	int row = 4;
-	int col = 4;
+	//int row = 4;
+	//int col = 4;
+	int row = 45;
+		int col = 50;
 	int patchMax = row*col;
-	int humanMax=100;
+	//int humanMax=100;
+	int humanMax=1000;
 	int iterations=30;
 
 	//set seed
@@ -118,6 +124,7 @@ int main() {
 
 	//storing array for graph output
 	int SData[iterations][row][col];
+	double SData0[row][col];
 	for(int i=0; i< iterations; i++){
 			for(int j=0; j<row; j++){
 				for(int k=0;k<col; k++){
@@ -133,11 +140,41 @@ int main() {
 	//checking the tsp timestep
 	for(int j=0; j<row; j++){
 					for(int k=0;k<col; k++){
+						SData0[j][k] = SData[tsp][j][k]; //data to plot
 						cout << SData[tsp][j][k] << " " ;
 					}
 					cout << endl;
 				}
 
+	//plotting
+	Dislin g;
+
+	g.scrmod ("revers");
+	  g.setfil ("3d color.png");
+	  g.metafl ("png");
+	  g.disini ();
+	  g.pagera ();
+	  g.hwfont ();
+
+	  g.titlin ("3-D Colour Plot of Patches", 2);
+	  g.titlin ("No. of Susceptible at Time 0", 4);
+
+	  g.name   ("X-axis", "x");
+	  g.name   ("Y-axis", "y");
+	  g.name   ("Z-axis", "z");
+
+	  g.intax  ();
+	  g.autres (col, row);
+	  g.axspos (300, 1850);
+	  g.ax3len (2200, 1400, 1400);
+
+	  g.graf3  (0.0, col, 0.0, 1.0, 0.0, row, 0.0, 1.0,
+	            0.0, 8.0, 0.0, 1.0);
+	  g.crvmat ((double *) SData0, col, row, 1, 1);
+
+	  //g.height (50);
+	  g.title  ();
+	  g.disfin ();
 
 
 	return 0;
