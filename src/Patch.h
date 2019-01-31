@@ -32,6 +32,7 @@ public:
 	void ResetTodayInfectedHuman(){todayInfectedHuman=0;};
 	//int GetTodayInfectedHuman(){return todayInfectedHuman;}; //delete after testing
 	void ResetStatesSummaryByPatch();
+	StatesSummary GetStatesSummaryByPatch();
 
 	void IncrementS();
 	void IncrementI();
@@ -39,7 +40,7 @@ public:
 
 	void StoreHistory();
 	void SetInfectivityToHuman();
-	int GetInfectivityToHuman();
+	int  GetInfectivityToHuman();
 	void Central();
 
 	//int GetTmp() {return tmp;};

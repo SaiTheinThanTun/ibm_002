@@ -27,6 +27,8 @@ private:
 	int iterations;
 	std::ofstream* outData;
 
+	std::vector< std::vector <StatesSummary> > statesSummaryAllPatchesAllTime;
+
 public:
 	StatesSummary statesSummary;
 	//StatesSummary statesSummaryAll[iterations];
@@ -51,6 +53,14 @@ public:
 	void PushOut();
 	//push the values to statesSummaryAll array to be stored for all iterations
 	//iterations variable was intended for this but simple array could not be initialized with user input value
+
+	void StoreAllPatchesAllTime(std::vector<StatesSummary> t){
+		statesSummaryAllPatchesAllTime.push_back(t);
+	}
+
+	int GetSxy(int x, int y){
+		return statesSummaryAllPatchesAllTime[x][y].GetS();
+	}
 
 	void Central(){
 		//Control center of the Observer object/class;

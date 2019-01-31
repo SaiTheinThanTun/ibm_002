@@ -77,15 +77,25 @@ int main() {
 			//there's a separate movement method
 		}
 
+		vector<StatesSummary> statesSummaryAllPatches; //tmp vector to store StatesSummary in all patches
+		//outside of loop for patches
+
 		for(int k=0; k<patchMax; k++){ //looping through patch array
+			statesSummaryAllPatches.push_back(village[k].GetStatesSummaryByPatch());
+
 			//cout << village[k].GetTmp() << " ";
 			village[k].Central(); //Central includes: StoreHistory, SetInfectivityToHuman, ResetTodayInfectedHuman
+			//patch.Central also resets what's stores inside the statesSummary
+			//therefore, push to observer has to be done before this
 		}
+
+		observer.StoreAllPatchesAllTime(statesSummaryAllPatches);
 		//cout << endl;
 		/*observer.CountingStates();
 		observer.WriteOut();
 		observer.PushOut();*/
 		observer.Central(); //Central includes: CountingStates, WriteOut, PushOut
+
 	}
 
 	outData.close();
@@ -97,6 +107,12 @@ int main() {
 
 	cout << "Length of the patch array is " << sizeof(village)/sizeof(Patch) << endl;
 
+	for(int i=0; i< iterations; i++){
+		for(int k=0; k<patchMax; k++){
+			cout << observer.GetSxy(i,k) << " ";
+		}
+		cout << endl;
+	}
 
 
 	return 0;

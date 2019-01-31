@@ -36,6 +36,10 @@ void Patch::ResetStatesSummaryByPatch(){
 	statesSummaryByPatch.SetR(0);
 }
 
+StatesSummary Patch::GetStatesSummaryByPatch(){
+	return statesSummaryByPatch;
+}
+
 void Patch::IncrementS(){
 	//statesSummaryByPatch.S_++;
 	statesSummaryByPatch.SetS(statesSummaryByPatch.GetS()+1);
@@ -85,6 +89,7 @@ void Patch::Central(){
 	SetInfectivityToHuman();
 	ResetTodayInfectedHuman();
 
+	ResetStatesSummaryByPatch();
 }
 
 } /* namespace io */
