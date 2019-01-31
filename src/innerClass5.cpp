@@ -41,7 +41,9 @@ int main() {
 	*/
 
 	//initialise properties of arrays
-	int patchMax = 4*4;
+	int row = 4;
+	int col = 4;
+	int patchMax = row*col;
 	int humanMax=100;
 	int iterations=30;
 
@@ -113,6 +115,29 @@ int main() {
 		}
 		cout << endl;
 	}
+
+	//storing array for graph output
+	int SData[iterations][row][col];
+	for(int i=0; i< iterations; i++){
+			for(int j=0; j<row; j++){
+				for(int k=0;k<col; k++){
+					SData[i][j][k] = observer.GetSxy(i,((j*row)+k)) ;
+				}
+
+			}
+		}
+
+	int tsp =0; // timestep to look at
+	cout << "Status at timestep " << tsp << " is: " << endl;
+
+	//checking the tsp timestep
+	for(int j=0; j<row; j++){
+					for(int k=0;k<col; k++){
+						cout << SData[tsp][j][k] << " " ;
+					}
+					cout << endl;
+				}
+
 
 
 	return 0;
