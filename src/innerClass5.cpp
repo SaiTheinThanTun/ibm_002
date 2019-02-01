@@ -46,12 +46,12 @@ int main() {
 	//initialise properties of arrays
 	//int row = 4;
 	//int col = 4;
-	int row = 45;
-		int col = 50;
+	int row = 25;
+		int col = 32;
 	int patchMax = row*col;
-	//int humanMax=100;
 	int humanMax=1000;
-	int iterations=30;
+	//int humanMax=32767;
+	int iterations=50; //32767; //30;
 
 	//set seed
 	srand(2);
@@ -115,7 +115,11 @@ int main() {
 
 	cout << "Length of the patch array is " << sizeof(village)/sizeof(Patch) << endl;
 
-	for(int i=0; i< iterations; i++){
+	//observer.PatchPlot(S,row,col);
+	//observer.PatchPlot(I,row,col);
+	observer.PatchPlot(R,row,col);
+
+	/*for(int i=0; i< iterations; i++){
 		for(int k=0; k<patchMax; k++){
 			cout << observer.GetSxy(i,k) << " ";
 		}
@@ -123,12 +127,12 @@ int main() {
 	}
 
 	//storing array for graph output
-	int SData[iterations][row][col];
-	double SData0[row][col];
+	int StatesData3D[iterations][row][col];
+	double StatesData2D0[row][col];
 	for(int i=0; i< iterations; i++){
 			for(int j=0; j<row; j++){
 				for(int k=0;k<col; k++){
-					SData[i][j][k] = observer.GetSxy(i,((j*row)+k)) ;
+					StatesData3D[i][j][k] = observer.GetSxy(i,((j*row)+k)) ;
 				}
 
 			}
@@ -140,14 +144,16 @@ int main() {
 	//checking the tsp timestep
 	for(int j=0; j<row; j++){
 					for(int k=0;k<col; k++){
-						SData0[j][k] = SData[tsp][j][k]; //data to plot
-						cout << SData[tsp][j][k] << " " ;
+						StatesData2D0[j][k] = StatesData3D[tsp][j][k]; //data to plot
+						cout << StatesData3D[tsp][j][k] << " " ;
 					}
 					cout << endl;
 				}
 
 	//plotting
 	Dislin g;
+	string ss = "No. of Susceptible at Time "+to_string(1);
+	const char *tString = ss.c_str();
 
 	g.scrmod ("revers");
 	  g.setfil ("3d color.png");
@@ -157,7 +163,7 @@ int main() {
 	  g.hwfont ();
 
 	  g.titlin ("3-D Colour Plot of Patches", 2);
-	  g.titlin ("No. of Susceptible at Time 0", 4);
+	  g.titlin (tString, 4);
 
 	  g.name   ("X-axis", "x");
 	  g.name   ("Y-axis", "y");
@@ -170,11 +176,11 @@ int main() {
 
 	  g.graf3  (0.0, col, 0.0, 1.0, 0.0, row, 0.0, 1.0,
 	            0.0, 8.0, 0.0, 1.0);
-	  g.crvmat ((double *) SData0, col, row, 1, 1);
+	  g.crvmat ((double *) StatesData2D0, col, row, 1, 1);
 
 	  //g.height (50);
 	  g.title  ();
-	  g.disfin ();
+	  g.disfin ();*/
 
 
 	return 0;

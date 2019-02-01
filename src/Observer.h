@@ -15,6 +15,7 @@
 #include "Human.h"
 #include "StatesSummary.h"
 #include "Patch.h"
+#include "Infection.h" // for States enum
 
 namespace io {
 
@@ -62,12 +63,22 @@ public:
 		return statesSummaryAllPatchesAllTime[x][y].GetS();
 	}
 
+	int GetIxy(int x, int y){
+			return statesSummaryAllPatchesAllTime[x][y].GetI();
+		}
+
+	int GetRxy(int x, int y){
+			return statesSummaryAllPatchesAllTime[x][y].GetR();
+		}
+
 	void Central(){
 		//Control center of the Observer object/class;
 		CountingStates();
 		WriteOut();
 		PushOut();
 	};
+
+	void PatchPlot(States State, int row, int col);
 
 
 };
