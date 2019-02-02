@@ -34,6 +34,7 @@ public:
 	StatesSummary statesSummary;
 	//StatesSummary statesSummaryAll[iterations];
 	std::vector<StatesSummary> statesSummaryAll; //(int size=iterations, StatesSummary);
+	//primative way of storing StatesSummary over time, not by patch
 
 	Observer(Human* humanArray, int humanMax, Patch* patchArray, int patchMax, int iterations, std::ofstream* outData){
 		this->humanArray=humanArray;
@@ -56,6 +57,11 @@ public:
 	//iterations variable was intended for this but simple array could not be initialized with user input value
 
 	void StoreAllPatchesAllTime(std::vector<StatesSummary> t){
+		/*precondition: a vector of StatesSummary across all patches must be stored (as input)
+		 * postcondition: creates a vector of vectors of StatesSummary (2D), and
+		 * store it in statesSummaryAllPatchesAllTime within the observer
+		 * this will be used later for plotting
+		 * */
 		statesSummaryAllPatchesAllTime.push_back(t);
 	}
 
@@ -79,7 +85,7 @@ public:
 	};
 
 	void PatchPlot(States State, int row, int col);
-
+	void OverallPlot(int stateS, int stateI, int stateR);
 
 };
 

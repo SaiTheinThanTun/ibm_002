@@ -112,76 +112,15 @@ int main() {
 	//checking the output
 	cout << "no. of S is: " << observer.statesSummary.GetS() << endl;
 	cout << "no. of S on 20th item is: " << observer.statesSummaryAll[20].GetS() << endl;
-
 	cout << "Length of the patch array is " << sizeof(village)/sizeof(Patch) << endl;
 
+	//PatchPlot
 	//observer.PatchPlot(S,row,col);
 	//observer.PatchPlot(I,row,col);
-	observer.PatchPlot(R,row,col);
+	//observer.PatchPlot(R,row,col);
 
-	/*for(int i=0; i< iterations; i++){
-		for(int k=0; k<patchMax; k++){
-			cout << observer.GetSxy(i,k) << " ";
-		}
-		cout << endl;
-	}
-
-	//storing array for graph output
-	int StatesData3D[iterations][row][col];
-	double StatesData2D0[row][col];
-	for(int i=0; i< iterations; i++){
-			for(int j=0; j<row; j++){
-				for(int k=0;k<col; k++){
-					StatesData3D[i][j][k] = observer.GetSxy(i,((j*row)+k)) ;
-				}
-
-			}
-		}
-
-	int tsp =0; // timestep to look at
-	cout << "Status at timestep " << tsp << " is: " << endl;
-
-	//checking the tsp timestep
-	for(int j=0; j<row; j++){
-					for(int k=0;k<col; k++){
-						StatesData2D0[j][k] = StatesData3D[tsp][j][k]; //data to plot
-						cout << StatesData3D[tsp][j][k] << " " ;
-					}
-					cout << endl;
-				}
-
-	//plotting
-	Dislin g;
-	string ss = "No. of Susceptible at Time "+to_string(1);
-	const char *tString = ss.c_str();
-
-	g.scrmod ("revers");
-	  g.setfil ("3d color.png");
-	  g.metafl ("png");
-	  g.disini ();
-	  g.pagera ();
-	  g.hwfont ();
-
-	  g.titlin ("3-D Colour Plot of Patches", 2);
-	  g.titlin (tString, 4);
-
-	  g.name   ("X-axis", "x");
-	  g.name   ("Y-axis", "y");
-	  g.name   ("Z-axis", "z");
-
-	  g.intax  ();
-	  g.autres (col, row);
-	  g.axspos (300, 1850);
-	  g.ax3len (2200, 1400, 1400);
-
-	  g.graf3  (0.0, col, 0.0, 1.0, 0.0, row, 0.0, 1.0,
-	            0.0, 8.0, 0.0, 1.0);
-	  g.crvmat ((double *) StatesData2D0, col, row, 1, 1);
-
-	  //g.height (50);
-	  g.title  ();
-	  g.disfin ();*/
-
+	//OverallPlot
+	observer.OverallPlot(1,1,1);
 
 	return 0;
 }
